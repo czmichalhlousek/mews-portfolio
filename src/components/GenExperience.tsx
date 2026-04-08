@@ -18,7 +18,7 @@ export default function GenExperience() {
     {
       icon: Users,
       title: "Team Lead & Educator",
-      description: "Community educator across platforms, fostering technical workflow innovation and AI adoption",
+      description: "Platform usability advocate, driving monetization strategies and cross-functional team alignment",
     },
     {
       icon: Zap,

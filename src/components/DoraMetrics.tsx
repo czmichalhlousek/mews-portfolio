@@ -10,7 +10,7 @@ const positions = [
     technicalFit: 0.85,
     softSkillsFit: 0.95,
     pastExperienceFit: 0.8,
-    overallFit: 0.87,
+    overallFit: 0.85,
     description: "Strongest overall match. Experience as people leader, involvement with product and developers, and ability to act as IC with no playbook align perfectly with role requirements.",
     highlights: ["Process optimization", "Cross-functional leadership", "Strategic influence without authority"],
     jdUrl: "https://www.mews.com/en/careers/jobs/4780581101?gh_jid=4780581101"
@@ -21,18 +21,18 @@ const positions = [
     technicalFit: 0.75,
     softSkillsFit: 0.9,
     pastExperienceFit: 0.75,
-    overallFit: 0.8,
+    overallFit: 0.79,
     description: "Excellent fit for strategic operations. Ability to adapt to systems and act as executive gatekeeper aligns with scaling EMEA GTM operations.",
     highlights: ["Strategic operations", "Data-driven insights", "Cross-functional GTM leadership"],
     jdUrl: "https://www.mews.com/en/careers/jobs/4815380101?gh_jid=4815380101"
   },
   {
-    title: "Lead Product Builder - Connectivity",
+    title: "Lead Product Builder\n- Connectivity",
     subtitle: "Very High Technical / High Soft Skills",
     technicalFit: 0.6,
     softSkillsFit: 0.85,
     pastExperienceFit: 0.9,
-    overallFit: 0.7,
+    overallFit: 0.81,
     description: "Stretch due to not being a developer, but AI skills and ability to prototype with AI tools are highly relevant for Mews' AI-native development vision.",
     highlights: ["AI-native prototyping", "Product intuition", "Rapid validation"],
     jdUrl: "https://www.mews.com/en/careers/jobs/4780557101?gh_jid=4780557101"
@@ -65,8 +65,11 @@ export default function DoraMetrics() {
               className="p-6 bg-mews-card border border-mews-border rounded-xl hover:border-mews-accent transition-all duration-300"
             >
               <div className="mb-4">
-                <h3 className="text-lg font-bold mb-2 leading-tight">{position.title}</h3>
-                <p className="text-sm text-mews-muted">{position.subtitle}</p>
+                <h3 className="text-lg font-bold mb-2 leading-tight whitespace-pre-line">{position.title}</h3>
+                <p className="text-sm text-mews-muted mb-2">{position.subtitle}</p>
+                <div className="inline-flex items-center gap-2 px-3 py-1 bg-mews-accent/10 rounded-full">
+                  <span className="text-xs font-semibold text-mews-accent">Overall Fit: {Math.round(position.overallFit * 100)}%</span>
+                </div>
               </div>
 
               <div className="space-y-3 mb-4">

@@ -6,6 +6,7 @@ import { ArrowRight } from "lucide-react";
 export default function Hero() {
   return (
     <section className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-mews-accent/5 via-transparent to-mews-accentHover/5" />
       <div className="absolute inset-0 bg-gradient-radial from-mews-accent/10 via-transparent to-transparent" />
       
       <motion.div
@@ -20,18 +21,38 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mb-8"
         >
-          <p className="text-lg md:text-xl text-mews-muted mb-4">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="text-lg md:text-xl text-mews-muted mb-6 font-medium"
+          >
             Michal Hloušek
-          </p>
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-mews-accent to-mews-accentHover bg-clip-text text-transparent leading-tight">
+          </motion.p>
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-mews-accent to-mews-accentHover bg-clip-text text-transparent leading-tight"
+          >
             Digital Success Lead & Strategic Growth Engineer
-          </h1>
-          <p className="text-xl md:text-2xl text-mews-muted mb-6">
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="text-xl md:text-2xl text-mews-muted mb-6"
+          >
             Gen Digital | 8+ years scaling product-led monetization
-          </p>
-          <p className="text-lg md:text-xl text-mews-muted mb-8 italic">
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="text-lg md:text-xl text-mews-muted mb-8 italic"
+          >
             "I build the systems that allow innovation to scale"
-          </p>
+          </motion.p>
         </motion.div>
 
         <motion.div
