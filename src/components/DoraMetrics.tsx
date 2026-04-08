@@ -16,17 +16,6 @@ const positions = [
     jdUrl: "https://www.mews.com/en/careers/jobs/4780581101?gh_jid=4780581101"
   },
   {
-    title: "Senior Associate - Market Development",
-    subtitle: "Low-Medium Technical / High Soft Skills",
-    technicalFit: 0.75,
-    softSkillsFit: 0.85,
-    pastExperienceFit: 0.75,
-    overallFit: 0.78,
-    description: "Good fit overall, least fit of the three. Excellent for strategic operations. Ability to adapt to systems and act as executive gatekeeper aligns with scaling EMEA GTM operations.",
-    highlights: ["Strategic operations", "Data-driven insights", "Cross-functional GTM leadership"],
-    jdUrl: "https://www.mews.com/en/careers/jobs/4815380101?gh_jid=4815380101"
-  },
-  {
     title: "Lead Product Builder\n- Connectivity",
     subtitle: "Very High Technical / High Soft Skills",
     technicalFit: 0.7,
@@ -36,6 +25,17 @@ const positions = [
     description: "Second strongest overall match, stretched due to not being a developer. AI skills and ability to prototype with AI tools are highly relevant for Mews' AI-native development vision.",
     highlights: ["AI-native prototyping", "Product intuition", "Rapid validation"],
     jdUrl: "https://www.mews.com/en/careers/jobs/4780557101?gh_jid=4780557101"
+  },
+  {
+    title: "Senior Associate - Market Development",
+    subtitle: "Low-Medium Technical / High Soft Skills",
+    technicalFit: 0.75,
+    softSkillsFit: 0.85,
+    pastExperienceFit: 0.75,
+    overallFit: 0.78,
+    description: "Good fit overall, least fit of the three. Excellent for strategic operations. Ability to adapt to systems and act as executive gatekeeper aligns with scaling EMEA GTM operations.",
+    highlights: ["Strategic operations", "Data-driven insights", "Cross-functional GTM leadership"],
+    jdUrl: "https://www.mews.com/en/careers/jobs/4815380101?gh_jid=4815380101"
   }
 ];
 
