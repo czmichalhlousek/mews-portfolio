@@ -7,23 +7,23 @@ export default function GenExperience() {
   const achievements = [
     {
       icon: Award,
-      title: "Growth Lead & Trial Squad Architect",
-      description: "Leading cross-functional teams responsible for global monetization of 100M+ users",
+      title: "Trial Squad Architect",
+      description: "Leading transformation to trial-led business model, orchestrating global portfolio pivot",
     },
     {
       icon: TrendingUp,
       title: "AI Product Monetization",
-      description: "Architected end-to-end user journey for AI-Powered Scam Protection across global portfolio",
+      description: "Architected end-to-end journey for AI-Powered Scam Guardian, expanding from browsing to email & mobile",
     },
     {
       icon: Users,
-      title: "People Leadership",
-      description: "Player-coach approach fostering high accountability and technical workflow innovation",
+      title: "Team Lead & Educator",
+      description: "Community educator across platforms, fostering technical workflow innovation and AI adoption",
     },
     {
       icon: Zap,
       title: "Rapid Prototyping",
-      description: "Building functional CX simulations in hours using AI-native IDEs",
+      description: "Building functional CX simulations in hours using AI-native IDEs for GTM validation",
     },
   ];
 
@@ -76,17 +76,17 @@ export default function GenExperience() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="bg-mews-card border border-mews-border rounded-lg p-8"
+          className="bg-mews-card border border-mews-border rounded-lg p-8 mb-8"
         >
           <h3 className="text-2xl font-bold mb-4">Launched Products with Global Impact</h3>
           <ul className="space-y-3 text-mews-muted">
             <li className="flex items-start gap-3">
               <span className="text-mews-accent mt-1">•</span>
-              <span><strong>AI-Powered Scam Protection:</strong> Expanded from browsing to email, mobile, and Deepfake protection</span>
+              <span><strong>Avast One 2.0:</strong> Hero product launch within Gen Digital's portfolio</span>
             </li>
             <li className="flex items-start gap-3">
               <span className="text-mews-accent mt-1">•</span>
-              <span><strong>Avast One 2.0:</strong> Launched the hero product of Gen Digital's portfolio</span>
+              <span><strong>AI-Powered Scam Guardian:</strong> Expanded from browsing to email, mobile protection</span>
             </li>
             <li className="flex items-start gap-3">
               <span className="text-mews-accent mt-1">•</span>
@@ -95,6 +95,34 @@ export default function GenExperience() {
             <li className="flex items-start gap-3">
               <span className="text-mews-accent mt-1">•</span>
               <span><strong>AntiTrack:</strong> Monetization-led acquisition of TrackOFF company across Avast/AVG brands</span>
+            </li>
+          </ul>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="bg-mews-card border border-mews-border rounded-lg p-8"
+        >
+          <h3 className="text-2xl font-bold mb-4">Key Capabilities</h3>
+          <ul className="space-y-3 text-mews-muted">
+            <li className="flex items-start gap-3">
+              <span className="text-mews-accent mt-1">•</span>
+              <span><strong>GTM Preparation:</strong> End-to-end go-to-market strategy for new product launches</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-mews-accent mt-1">•</span>
+              <span><strong>Business Case Creation:</strong> Advanced forecast modeling and growth monetization strategy</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-mews-accent mt-1">•</span>
+              <span><strong>E2E Journey Optimization:</strong> Systematic customer journey optimization from acquisition to retention</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-mews-accent mt-1">•</span>
+              <span><strong>AI-Powered Automation:</strong> Content creation & triggers with automated product & pricing recommendations</span>
             </li>
           </ul>
         </motion.div>

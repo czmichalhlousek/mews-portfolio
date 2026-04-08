@@ -6,21 +6,21 @@ import { Briefcase, Rocket, Target } from "lucide-react";
 const milestones = [
   {
     year: "2018-2022",
-    title: "E-Commerce Specialist",
+    title: "Junior to Senior E-Commerce Specialist",
     description: "Led monetization and UX architecture for privacy portfolio (VPN, AntiTrack, BreachGuard), managing Avast One launch and TrackOFF acquisition integration",
     icon: Briefcase,
     color: "from-blue-500 to-purple-500"
   },
   {
     year: "2022-2023",
-    title: "Principal E-Commerce Specialist",
+    title: "Principal Product Growth Generalist",
     description: "Spearheaded E2E personalization, engineered automated digital success journeys using PowerBI and Adobe Analytics, scaled lifecycle architecture globally",
     icon: Rocket,
     color: "from-green-500 to-teal-500"
   },
   {
     year: "2023-Present",
-    title: "Growth Lead & Trial Squad Architect",
+    title: "Growth Monetization Lead & PLG",
     description: "Leading cross-functional teams, orchestrating trial-led transformation of global portfolio, architecting AI product monetization for 100M+ users",
     icon: Target,
     color: "from-orange-500 to-red-500"

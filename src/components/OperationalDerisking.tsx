@@ -6,23 +6,23 @@ import { Shield, TrendingUp, AlertTriangle, CheckCircle } from "lucide-react";
 const strategies = [
   {
     icon: Shield,
-    title: "Profit Protection",
-    description: "Transforming security incidents into competitive advantage through rapid response and transparent communication"
+    title: "Risk Reduction",
+    description: "Data-driven A/B testing to validate hypotheses before full-scale rollout, maximizing ROI"
   },
   {
     icon: TrendingUp,
-    title: "Data-Driven Decisions",
-    description: "Using A/B testing to validate hypotheses before full-scale rollout, reducing risk and maximizing ROI"
+    title: "Telemetry Systems",
+    description: "Implementing monitoring that flags anomalies before they impact customer experience"
   },
   {
     icon: AlertTriangle,
-    title: "Early Detection",
-    description: "Implementing telemetry systems that flag anomalies before they impact customer experience"
+    title: "Forecast Modeling",
+    description: "Advanced business case creation and growth monetization strategy to reduce uncertainty"
   },
   {
     icon: CheckCircle,
-    title: "Continuous Validation",
-    description: "Building automated checks that ensure every release meets quality and security standards"
+    title: "Quality Assurance",
+    description: "Building automated validation that ensures every CX journey meets quality standards"
   }
 ];
 
@@ -37,8 +37,8 @@ export default function OperationalDerisking() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Operational De-risking</h2>
-          <p className="text-xl text-mews-muted">Turning failures into market differentiators</p>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">Data-Driven Risk Reduction</h2>
+          <p className="text-xl text-mews-muted">Minimizing uncertainty through validation and forecasting</p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8">

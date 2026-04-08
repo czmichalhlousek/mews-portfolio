@@ -5,10 +5,10 @@ import { Code2, Database as DatabaseIcon, GitBranch, Zap, Cpu } from "lucide-rea
 
 const techStack = [
   { icon: Code2, name: "AI-Augmented Development", description: "Windsurf/Cascade for rapid prototyping" },
-  { icon: DatabaseIcon, name: "Azure DevOps", description: "CI/CD pipelines & release management" },
-  { icon: GitBranch, name: "Jira Integration", description: "End-to-end workflow automation" },
-  { icon: Zap, name: "Python Logic", description: "Data-driven automation scripts" },
-  { icon: Cpu, name: "SQL Analytics", description: "Telemetry & decision support" }
+  { icon: DatabaseIcon, name: "PowerBI Analytics", description: "Data-driven decision making & visualization" },
+  { icon: GitBranch, name: "LLM Agents", description: "ChatGPT, Gemini, Claude for automation" },
+  { icon: Zap, name: "AI Content Creation", description: "Automated product & pricing recommendations" },
+  { icon: Cpu, name: "Cross-Functional Collaboration", description: "Engineering, Design, Product, Platform teams" }
 ];
 
 export default function GrowthEngine() {
@@ -45,7 +45,7 @@ export default function GrowthEngine() {
             </div>
             <div className="p-4">
               <div className="text-3xl font-bold text-mews-accent mb-2">Deployment</div>
-              <p className="text-mews-muted">Automated CI/CD with Azure DevOps</p>
+              <p className="text-mews-muted">Collaborative delivery with cross-functional teams</p>
             </div>
           </div>
         </motion.div>

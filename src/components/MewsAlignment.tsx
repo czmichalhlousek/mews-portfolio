@@ -6,30 +6,30 @@ import { Target, Database, Lock, Zap } from "lucide-react";
 const alignments = [
   {
     icon: Target,
-    title: "Growth Product Leadership",
-    subtitle: "Cross-Functional Squad Leadership",
-    description: "Leading teams with focus on shared success, continuous learning, and removing operational blockers",
+    title: "Product Operations",
+    subtitle: "Process & Value Stream Optimization",
+    description: "Analyzing end-to-end product value streams, removing bottlenecks, and implementing scalable improvements across R&D and GTM",
     color: "from-blue-500 to-purple-500"
   },
   {
     icon: Database,
-    title: "Customer Journey Architecture",
-    subtitle: "Automated Lifecycle Systems",
-    description: "Designing trigger-based messaging and in-product flows that scale globally",
+    title: "GTM Strategy & Execution",
+    subtitle: "Strategic Operations",
+    description: "Translating regional strategies into clear operating cadences, designing decision-oriented workflows and dashboards for cross-functional success",
     color: "from-green-500 to-teal-500"
   },
   {
     icon: Lock,
-    title: "Path to Value Optimization",
-    subtitle: "Friction Removal",
-    description: "Systematic identification and removal of friction points that stall user activation and Time-to-Value",
+    title: "AI-Native Product Building",
+    subtitle: "Rapid Prototyping & Validation",
+    description: "Building functional CX simulations in hours using AI-native IDEs, moving from hypothesis to validated journey quickly",
     color: "from-orange-500 to-red-500"
   },
   {
     icon: Zap,
-    title: "Rapid Validation",
-    subtitle: "AI-Native Development",
-    description: "Moving from growth hypothesis to functional CX journey in hours using AI-native development workflows",
+    title: "Cross-Functional Leadership",
+    subtitle: "Stakeholder Management",
+    description: "Influencing without authority across engineering, design, product, and business teams to drive shared outcomes",
     color: "from-purple-500 to-pink-500"
   }
 ];

@@ -6,29 +6,29 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const values = [
   {
-    title: "Ambitious",
-    description: "Setting bold goals and driving initiatives that push boundaries and deliver exceptional results",
-    icon: "🚀"
+    title: "Delight Customers",
+    description: "Driving innovation to create exceptional experiences that transform hospitality",
+    icon: "🎯"
   },
   {
-    title: "Resilient",
-    description: "Turning setbacks into learning opportunities and maintaining focus through challenges",
-    icon: "💪"
-  },
-  {
-    title: "Curious",
-    description: "Continuously exploring new technologies, methodologies, and ways to improve systems",
-    icon: "🔍"
-  },
-  {
-    title: "Open",
-    description: "Fostering transparency, collaboration, and knowledge sharing across teams",
+    title: "Cultivate Trust",
+    description: "Fostering openness and transparency across teams to build lasting relationships",
     icon: "🤝"
   },
   {
-    title: "Human",
-    description: "Putting people first—customers, colleagues, and the communities we serve",
-    icon: "❤️"
+    title: "Simplify Complexity",
+    description: "Prizing agility by turning complex challenges into elegant, scalable solutions",
+    icon: "⚡"
+  },
+  {
+    title: "Listen Deeply",
+    description: "Acting boldly on insights to create meaningful impact for customers and colleagues",
+    icon: "👂"
+  },
+  {
+    title: "Win Together",
+    description: "Enjoying the journey while collaborating to achieve shared success",
+    icon: "🎉"
   }
 ];
 
