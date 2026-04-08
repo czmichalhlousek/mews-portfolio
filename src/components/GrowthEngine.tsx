@@ -6,8 +6,7 @@ import { Code2, Database as DatabaseIcon, GitBranch, Zap, Cpu } from "lucide-rea
 const techStack = [
   { icon: Code2, name: "AI-Augmented Development", description: "Windsurf/Cascade for rapid prototyping" },
   { icon: DatabaseIcon, name: "PowerBI Analytics", description: "Data-driven decision making & visualization" },
-  { icon: GitBranch, name: "LLM Agents", description: "ChatGPT, Gemini, Claude for automation" },
-  { icon: Zap, name: "AI Content Creation", description: "Automated product & pricing recommendations" },
+  { icon: GitBranch, name: "LLM-Enabled Workflows", description: "Using ChatGPT, Gemini, Claude for content creation, automation, and flows" },
   { icon: Cpu, name: "Cross-Functional Collaboration", description: "Engineering, Design, Product, Platform teams" }
 ];
 

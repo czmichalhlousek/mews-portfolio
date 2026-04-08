@@ -8,7 +8,7 @@ const alignments = [
     icon: Target,
     title: "Product Operations",
     subtitle: "Process & Value Stream Optimization",
-    description: "Analyzing end-to-end product value streams, removing bottlenecks, and implementing scalable improvements across R&D and GTM",
+    description: "Connecting cross-functional teams across product, delivery, engineering, and business to drive monetization and growth",
     color: "from-blue-500 to-purple-500"
   },
   {

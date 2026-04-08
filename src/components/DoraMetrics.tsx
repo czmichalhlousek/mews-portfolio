@@ -9,33 +9,39 @@ const positions = [
     subtitle: "Medium Technical / Very High Soft Skills",
     technicalFit: 0.85,
     softSkillsFit: 0.95,
-    overallFit: 0.9,
+    pastExperienceFit: 0.8,
+    overallFit: 0.87,
     description: "Strongest overall match. Experience as people leader, involvement with product and developers, and ability to act as IC with no playbook align perfectly with role requirements.",
-    highlights: ["Process optimization", "Cross-functional leadership", "Strategic influence without authority"]
+    highlights: ["Process optimization", "Cross-functional leadership", "Strategic influence without authority"],
+    jdUrl: "https://www.mews.com/en/careers/jobs/4780581101?gh_jid=4780581101"
   },
   {
     title: "Senior Associate - Market Development",
     subtitle: "Low-Medium Technical / High Soft Skills",
     technicalFit: 0.75,
     softSkillsFit: 0.9,
-    overallFit: 0.85,
+    pastExperienceFit: 0.75,
+    overallFit: 0.8,
     description: "Excellent fit for strategic operations. Ability to adapt to systems and act as executive gatekeeper aligns with scaling EMEA GTM operations.",
-    highlights: ["Strategic operations", "Data-driven insights", "Cross-functional GTM leadership"]
+    highlights: ["Strategic operations", "Data-driven insights", "Cross-functional GTM leadership"],
+    jdUrl: "https://www.mews.com/en/careers/jobs/4815380101?gh_jid=4815380101"
   },
   {
     title: "Lead Product Builder - Connectivity",
     subtitle: "Very High Technical / High Soft Skills",
     technicalFit: 0.6,
     softSkillsFit: 0.85,
+    pastExperienceFit: 0.9,
     overallFit: 0.7,
     description: "Stretch due to not being a developer, but AI skills and ability to prototype with AI tools are highly relevant for Mews' AI-native development vision.",
-    highlights: ["AI-native prototyping", "Product intuition", "Rapid validation"]
+    highlights: ["AI-native prototyping", "Product intuition", "Rapid validation"],
+    jdUrl: "https://www.mews.com/en/careers/jobs/4780557101?gh_jid=4780557101"
   }
 ];
 
 export default function DoraMetrics() {
   return (
-    <section className="py-24 px-4">
+    <section id="position-fit" className="py-24 px-4">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -59,7 +65,7 @@ export default function DoraMetrics() {
               className="p-6 bg-mews-card border border-mews-border rounded-xl hover:border-mews-accent transition-all duration-300"
             >
               <div className="mb-4">
-                <h3 className="text-lg font-bold mb-2">{position.title}</h3>
+                <h3 className="text-lg font-bold mb-2 leading-tight">{position.title}</h3>
                 <p className="text-sm text-mews-muted">{position.subtitle}</p>
               </div>
 
@@ -98,6 +104,22 @@ export default function DoraMetrics() {
 
                 <div>
                   <div className="flex justify-between text-sm mb-1">
+                    <span className="text-mews-muted">Past Experience Fit</span>
+                    <span className="font-semibold">{Math.round(position.pastExperienceFit * 100)}%</span>
+                  </div>
+                  <div className="h-2 bg-mews-border rounded-full overflow-hidden">
+                    <motion.div
+                      initial={{ width: 0 }}
+                      whileInView={{ width: `${position.pastExperienceFit * 100}%` }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 1, delay: index * 0.2 + 0.45 }}
+                      className="h-full bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <div className="flex justify-between text-sm mb-1">
                     <span className="text-mews-muted">Overall Fit</span>
                     <span className="font-semibold text-mews-accent">{Math.round(position.overallFit * 100)}%</span>
                   </div>
@@ -115,7 +137,7 @@ export default function DoraMetrics() {
 
               <p className="text-sm text-mews-muted mb-4 leading-relaxed">{position.description}</p>
 
-              <div className="space-y-2">
+              <div className="space-y-2 mb-4">
                 {position.highlights.map((highlight, i) => (
                   <div key={i} className="flex items-center gap-2 text-sm">
                     <CheckCircle className="w-4 h-4 text-mews-accent flex-shrink-0" />
@@ -123,6 +145,15 @@ export default function DoraMetrics() {
                   </div>
                 ))}
               </div>
+
+              <a
+                href={position.jdUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm text-mews-accent hover:underline font-semibold"
+              >
+                View Job Description →
+              </a>
             </motion.div>
           ))}
         </div>
