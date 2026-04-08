@@ -44,7 +44,7 @@ export default function MewserMindset() {
   };
 
   return (
-    <section className="py-24 px-4 bg-mews-card/50">
+    <section id="mewser-mindset" className="py-24 px-4 bg-mews-card/50">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -11,6 +11,7 @@ const sections = [
   { name: "Risk Reduction", id: "operational-derisking" },
   { name: "Mewser Mindset", id: "mewser-mindset" },
   { name: "Position Fit", id: "position-fit" },
+  { name: "Path to Mews", id: "path-to-mews" },
 ];
 
 export default function Navigation() {
@@ -60,8 +61,13 @@ export default function Navigation() {
     >
       <div className="max-w-6xl mx-auto px-4 py-3">
         <div className="flex items-center justify-between gap-4">
+          {/* Name */}
+          <div className="flex-shrink-0">
+            <span className="text-sm font-bold text-mews-accent">Michal Hloušek</span>
+          </div>
+
           {/* Metro-style menu */}
-          <div className="flex items-center gap-2 overflow-x-auto no-scrollbar">
+          <div className="flex items-center gap-2 overflow-x-auto no-scrollbar flex-1">
             {sections.map((section) => (
               <a
                 key={section.id}

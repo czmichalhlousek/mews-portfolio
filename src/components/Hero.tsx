@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Linkedin } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -72,8 +72,9 @@ export default function Hero() {
             href="https://www.linkedin.com/in/michalhlousek/"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-8 py-4 border border-mews-border hover:border-mews-accent rounded-lg font-semibold transition-all duration-300"
+            className="group flex items-center gap-3 px-8 py-4 border border-mews-border hover:border-mews-accent rounded-lg font-semibold transition-all duration-300"
           >
+            <Linkedin className="w-6 h-6" />
             Connect on LinkedIn
           </a>
         </motion.div>

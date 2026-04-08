@@ -37,11 +37,16 @@ export default function GenExperience() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
+          <img
+            src="https://filecache.mediaroom.com/mr5mr_nortonlifelock/178470/Gen-Gen-Family-GenOneLine-Col-Dark-RGB-Web.png"
+            alt="Gen Digital"
+            className="h-12 mx-auto mb-6"
+          />
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-mews-accent to-mews-accentHover bg-clip-text text-transparent">
             Gen Digital Experience
           </h2>
           <p className="text-xl text-mews-muted max-w-3xl mx-auto">
-            8+ years scaling product-led monetization at a global cyber safety leader with 500M+ users
+            8+ years scaling product-led monetization at a global cyber safety leader with 100M+ users
           </p>
         </motion.div>
 

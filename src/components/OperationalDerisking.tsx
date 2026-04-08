@@ -28,7 +28,7 @@ const strategies = [
 
 export default function OperationalDerisking() {
   return (
-    <section className="py-24 px-4">
+    <section id="operational-derisking" className="py-24 px-4">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
