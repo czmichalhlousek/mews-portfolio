@@ -79,24 +79,32 @@ export default function GenExperience() {
           className="bg-mews-card border border-mews-border rounded-lg p-8 mb-8"
         >
           <h3 className="text-2xl font-bold mb-4">Launched Products with Global Impact</h3>
-          <ul className="space-y-3 text-mews-muted">
-            <li className="flex items-start gap-3">
-              <span className="text-mews-accent mt-1">•</span>
-              <span><strong>Avast One 2.0:</strong> Hero product launch within Gen Digital's portfolio</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="text-mews-accent mt-1">•</span>
-              <span><strong>AI-Powered Scam Guardian:</strong> Expanded from browsing to email, mobile protection</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="text-mews-accent mt-1">•</span>
-              <span><strong>Secure Identity:</strong> First identity protection solution within Avast portfolio</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="text-mews-accent mt-1">•</span>
-              <span><strong>AntiTrack:</strong> Monetization-led acquisition of TrackOFF company across Avast/AVG brands</span>
-            </li>
-          </ul>
+          <div className="space-y-6">
+            <div className="border-l-4 border-mews-accent pl-4">
+              <h4 className="font-bold text-lg mb-2">Avast One 2.0</h4>
+              <p className="text-mews-muted text-sm mb-2">Hero product launch (September 2025) with scaling to April 2026</p>
+              <p className="text-mews-muted text-sm">Led go-to-market strategy and customer journey optimization for the flagship product</p>
+              <a href="https://www.avast.com/en-us/avast-one#pc" target="_blank" rel="noopener noreferrer" className="text-mews-accent text-sm hover:underline">View Product →</a>
+            </div>
+            <div className="border-l-4 border-mews-accent pl-4">
+              <h4 className="font-bold text-lg mb-2">AI-Powered Scam Guardian</h4>
+              <p className="text-mews-muted text-sm mb-2">Expanded protection from browsing to email, mobile, and Deepfake detection</p>
+              <p className="text-mews-muted text-sm">Architected end-to-end customer journey for AI scam protection across global portfolio</p>
+              <a href="https://www.avast.com/en-us/premium-security#pc" target="_blank" rel="noopener noreferrer" className="text-mews-accent text-sm hover:underline">View Product →</a>
+            </div>
+            <div className="border-l-4 border-mews-accent pl-4">
+              <h4 className="font-bold text-lg mb-2">Secure Identity</h4>
+              <p className="text-mews-muted text-sm mb-2">First identity protection solution within Avast portfolio</p>
+              <p className="text-mews-muted text-sm">Led market positioning and customer communication strategy for new identity protection offering</p>
+              <a href="https://www.avast.com/en-us/secure-identity#pc" target="_blank" rel="noopener noreferrer" className="text-mews-accent text-sm hover:underline">View Product →</a>
+            </div>
+            <div className="border-l-4 border-mews-accent pl-4">
+              <h4 className="font-bold text-lg mb-2">AntiTrack</h4>
+              <p className="text-mews-muted text-sm mb-2">Monetization-led acquisition of TrackOFF company across Avast/AVG brands</p>
+              <p className="text-mews-muted text-sm">Orchestrated cross-brand GTM strategy and customer journey integration</p>
+              <a href="https://www.avast.com/en-us/antitrack#pc" target="_blank" rel="noopener noreferrer" className="text-mews-accent text-sm hover:underline">View Product →</a>
+            </div>
+          </div>
         </motion.div>
 
         <motion.div

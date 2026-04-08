@@ -23,7 +23,7 @@ export default function Hero() {
           <p className="text-lg md:text-xl text-mews-muted mb-4">
             Michal Hloušek
           </p>
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-mews-accent to-mews-accentHover bg-clip-text text-transparent">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-mews-accent to-mews-accentHover bg-clip-text text-transparent leading-tight">
             Digital Success Lead & Strategic Growth Engineer
           </h1>
           <p className="text-xl md:text-2xl text-mews-muted mb-6">

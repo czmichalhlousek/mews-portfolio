@@ -49,9 +49,9 @@ export default function CTA() {
             <h3 className="text-2xl font-bold mb-4">Why I'm the Right Fit for Mews</h3>
             <div className="grid md:grid-cols-2 gap-6 text-left">
               <div>
-                <h4 className="font-bold text-mews-accent mb-2">Technical Alignment</h4>
+                <h4 className="font-bold text-mews-accent mb-2">AI-Native Development</h4>
                 <p className="text-mews-muted text-sm">
-                  Proficient in Azure DevOps, understanding how Pull Requests and Release Pipelines impact customer experience in a C#/.NET environment
+                  Building functional CX simulations in hours using AI-native IDEs (Windsurf, Cascade, ChatGPT, Claude) for rapid GTM validation
                 </p>
               </div>
               <div>

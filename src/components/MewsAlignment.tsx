@@ -13,9 +13,9 @@ const alignments = [
   },
   {
     icon: Database,
-    title: "GTM Strategy & Execution",
-    subtitle: "Strategic Operations",
-    description: "Translating regional strategies into clear operating cadences, designing decision-oriented workflows and dashboards for cross-functional success",
+    title: "Online GTM Strategy",
+    subtitle: "Digital Acquisition & Conversion",
+    description: "Designing online customer journeys, optimizing conversion funnels, and implementing data-driven tactics for digital growth",
     color: "from-green-500 to-teal-500"
   },
   {
