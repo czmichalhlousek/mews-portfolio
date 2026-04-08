@@ -20,11 +20,17 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mb-8"
         >
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-mews-accent to-mews-accentHover bg-clip-text text-transparent">
-            I build the systems that allow innovation to scale
+          <p className="text-lg md:text-xl text-mews-muted mb-4">
+            Michal Hloušek
+          </p>
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-mews-accent to-mews-accentHover bg-clip-text text-transparent">
+            Digital Success Lead & Strategic Growth Engineer
           </h1>
-          <p className="text-xl md:text-2xl text-mews-muted mb-8">
-            Bridging the gap between R&D velocity and GTM precision
+          <p className="text-xl md:text-2xl text-mews-muted mb-6">
+            Gen Digital | 8+ years scaling product-led monetization
+          </p>
+          <p className="text-lg md:text-xl text-mews-muted mb-8 italic">
+            "I build the systems that allow innovation to scale"
           </p>
         </motion.div>
 

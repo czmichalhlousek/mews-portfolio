@@ -6,30 +6,30 @@ import { Target, Database, Lock, Zap } from "lucide-react";
 const alignments = [
   {
     icon: Target,
-    title: "Centralized Identity",
-    subtitle: "Rui Oliveira's M Suite",
-    description: "Building unified systems that eliminate silos and create seamless user experiences across the Hospitality Cloud",
+    title: "Growth Product Leadership",
+    subtitle: "Cross-Functional Squad Leadership",
+    description: "Leading teams with focus on shared success, continuous learning, and removing operational blockers",
     color: "from-blue-500 to-purple-500"
   },
   {
     icon: Database,
-    title: "Ecosystem Mapping",
-    subtitle: "Sofía Santos' Data Signals",
-    description: "Transforming raw telemetry into actionable insights that drive product decisions and customer success",
+    title: "Customer Journey Architecture",
+    subtitle: "Automated Lifecycle Systems",
+    description: "Designing trigger-based messaging and in-product flows that scale globally",
     color: "from-green-500 to-teal-500"
   },
   {
     icon: Lock,
-    title: "Secure by Design",
-    subtitle: "Granular Permissions",
-    description: "Implementing security-first architecture that protects data while enabling seamless collaboration",
+    title: "Path to Value Optimization",
+    subtitle: "Friction Removal",
+    description: "Systematic identification and removal of friction points that stall user activation and Time-to-Value",
     color: "from-orange-500 to-red-500"
   },
   {
     icon: Zap,
-    title: "Value Stream Mapping",
-    subtitle: "Operational Excellence",
-    description: "Optimizing the flow from concept to delivery, ensuring every sprint delivers measurable business impact",
+    title: "Rapid Validation",
+    subtitle: "AI-Native Development",
+    description: "Moving from growth hypothesis to functional CX journey in hours using AI-native development workflows",
     color: "from-purple-500 to-pink-500"
   }
 ];
@@ -45,8 +45,8 @@ export default function MewsAlignment() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">The Mews Alignment Matrix</h2>
-          <p className="text-xl text-mews-muted">Where my expertise meets the Mews vision</p>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">Core Expertise</h2>
+          <p className="text-xl text-mews-muted">8+ years of specialized growth and operational excellence</p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8">

@@ -5,23 +5,23 @@ import { Briefcase, Rocket, Target } from "lucide-react";
 
 const milestones = [
   {
-    year: "Gen Digital",
-    title: "Digital Success Lead",
-    description: "Led trial squads and built automation systems that scaled feature measurement across the organization",
+    year: "2018-2022",
+    title: "E-Commerce Specialist",
+    description: "Led monetization and UX architecture for privacy portfolio (VPN, AntiTrack, BreachGuard), managing Avast One launch and TrackOFF acquisition integration",
     icon: Briefcase,
     color: "from-blue-500 to-purple-500"
   },
   {
-    year: "Evolution",
-    title: "Growth Engineer",
-    description: "Transitioned to building the systems that enable innovation, focusing on PLG and data-driven growth",
+    year: "2022-2023",
+    title: "Principal E-Commerce Specialist",
+    description: "Spearheaded E2E personalization, engineered automated digital success journeys using PowerBI and Adobe Analytics, scaled lifecycle architecture globally",
     icon: Rocket,
     color: "from-green-500 to-teal-500"
   },
   {
-    year: "Today",
-    title: "Staff Technical Program Manager",
-    description: "Bridging R&D velocity with GTM precision, ready to bring operational excellence to Mews",
+    year: "2023-Present",
+    title: "Growth Lead & Trial Squad Architect",
+    description: "Leading cross-functional teams, orchestrating trial-led transformation of global portfolio, architecting AI product monetization for 100M+ users",
     icon: Target,
     color: "from-orange-500 to-red-500"
   }
@@ -88,9 +88,12 @@ export default function PathToMews() {
           className="mt-16 text-center"
         >
           <div className="inline-block p-8 bg-gradient-to-r from-mews-accent/10 to-mews-accentHover/5 border border-mews-accent/20 rounded-2xl">
-            <h3 className="text-2xl font-bold mb-4">Ready for the Next Chapter</h3>
+            <h3 className="text-2xl font-bold mb-4">Why MEWS?</h3>
+            <p className="text-mews-muted max-w-2xl mx-auto mb-4">
+              "I am drawn to Mews for the same reason I joined Avast nearly a decade ago: the unique energy of a Czech-born global challenger. I thrive in agile, 'no-playbook' environments where high autonomy is the standard and speed is a feature."
+            </p>
             <p className="text-mews-muted max-w-2xl mx-auto">
-              My journey has prepared me to bring operational excellence, data-driven decision making, and a human-centric approach to the Mews Hospitality Cloud
+              Having seen Avast evolve from a local hero into a global leader (Gen Digital), I am eager to apply my experience in scaling product-led monetization and operational systems to help Mews redefine the hospitality industry.
             </p>
           </div>
         </motion.div>

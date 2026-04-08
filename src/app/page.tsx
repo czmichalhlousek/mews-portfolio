@@ -1,4 +1,5 @@
 import Hero from "@/components/Hero";
+import GenExperience from "@/components/GenExperience";
 import MewsAlignment from "@/components/MewsAlignment";
 import GrowthEngine from "@/components/GrowthEngine";
 import OperationalDerisking from "@/components/OperationalDerisking";
@@ -13,6 +14,7 @@ export default function Home() {
     <main className="min-h-screen">
       <ThemeToggle />
       <Hero />
+      <GenExperience />
       <MewsAlignment />
       <GrowthEngine />
       <OperationalDerisking />
