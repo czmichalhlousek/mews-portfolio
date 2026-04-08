@@ -2,6 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
   output: 'export',
+  basePath: '/mews-portfolio',
+  assetPrefix: '/mews-portfolio',
   images: {
     unoptimized: true,
   },
