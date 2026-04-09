@@ -7,6 +7,12 @@ export default function ThemeToggle() {
   const [isDark, setIsDark] = useState(true);
 
   useEffect(() => {
+    // Initialize with dark mode by default
+    const html = document.documentElement;
+    html.classList.add("dark");
+  }, []);
+
+  useEffect(() => {
     const html = document.documentElement;
     if (isDark) {
       html.classList.add("dark");

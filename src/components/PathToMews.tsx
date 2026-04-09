@@ -43,9 +43,9 @@ export default function PathToMews() {
         </motion.div>
 
         <div className="relative">
-          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-mews-border hidden md:block" />
+          <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 h-full w-1 bg-mews-border" />
           
-          <div className="space-y-12">
+          <div className="space-y-12 md:space-y-12">
             {milestones.map((milestone, index) => {
               const Icon = milestone.icon;
               const isEven = index % 2 === 0;
@@ -59,21 +59,21 @@ export default function PathToMews() {
                   transition={{ duration: 0.6, delay: index * 0.2 }}
                   className={`relative flex items-center ${isEven ? "md:flex-row" : "md:flex-row-reverse"}`}
                 >
-                  <div className={`flex-1 ${isEven ? "md:text-right md:pr-12" : "md:text-left md:pl-12"}`}>
-                    <div className="p-8 bg-mews-dark border border-mews-border rounded-xl hover:border-mews-accent transition-all duration-300">
-                      <div className={`inline-block px-4 py-1 rounded-full bg-gradient-to-r ${milestone.color} text-white text-sm font-bold mb-4`}>
-                        {milestone.year}
-                      </div>
-                      <h3 className="text-2xl font-bold mb-3">{milestone.title}</h3>
-                      <p className="text-mews-muted leading-relaxed">{milestone.description}</p>
-                    </div>
-                  </div>
-                  
-                  <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-mews-accent rounded-full items-center justify-center border-4 border-mews-card">
+                  <div className="w-12 h-12 bg-mews-accent rounded-full items-center justify-center border-4 border-mews-card flex-shrink-0 ml-0 md:ml-0 md:absolute md:left-1/2 md:transform md:-translate-x-1/2 z-10">
                     <Icon className="w-6 h-6 text-white" />
                   </div>
                   
-                  <div className="flex-1" />
+                  <div className={`flex-1 ml-6 md:ml-0 ${isEven ? "md:text-right md:pr-12" : "md:text-left md:pl-12"}`}>
+                    <div className="p-6 md:p-8 bg-mews-dark border border-mews-border rounded-xl hover:border-mews-accent transition-all duration-300">
+                      <div className={`inline-block px-4 py-1 rounded-full bg-gradient-to-r ${milestone.color} text-white text-sm font-bold mb-4`}>
+                        {milestone.year}
+                      </div>
+                      <h3 className="text-xl md:text-2xl font-bold mb-3">{milestone.title}</h3>
+                      <p className="text-mews-muted leading-relaxed text-sm md:text-base">{milestone.description}</p>
+                    </div>
+                  </div>
+                  
+                  <div className="hidden md:flex flex-1" />
                 </motion.div>
               );
             })}

@@ -51,7 +51,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.6 }}
             className="text-lg md:text-xl text-mews-muted mb-8 italic"
           >
-            "I build the systems that allow innovation to scale"
+            "From customer journeys through building the systems that allow innovation to scale"
           </motion.p>
         </motion.div>
 

@@ -71,6 +71,11 @@ export default function Navigation() {
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
 
+          {/* Name - mobile */}
+          <div className="lg:hidden flex-1 text-center">
+            <span className="text-sm font-bold text-mews-accent">Michal Hloušek</span>
+          </div>
+
           {/* Metro-style menu - desktop */}
           <div className="hidden lg:flex items-center gap-2 overflow-x-auto no-scrollbar flex-1">
             {sections.map((section) => (

@@ -1,21 +1,23 @@
-# Michal Hlousek - Staff TPM & Product Ops Portfolio
+# Michal Hlousek - MEWS Portfolio
 
-A professional portfolio website targeting MEWS, showcasing operational excellence and growth architecture expertise.
+A professional portfolio website targeting MEWS, showcasing operational excellence, growth architecture, and AI-native development expertise.
 
 ## Features
 
-- **Hero Section**: Bold "No Playbook" narrative emphasizing system building
-- **Mews Alignment Matrix**: 2x2 grid showing alignment with MEWS strategic initiatives
-- **Growth Engine**: Technical showcase of AI-native development workflow
-- **Operational De-risking**: A/B testing and data-driven decision making
-- **The Mewser Mindset**: Interactive carousel of MEWS values
-- **DORA Metrics Dashboard**: Interactive visualization of operational excellence
-- **Path to Mews**: Timeline showing career evolution
-- **CTA Section**: LinkedIn and email contact options
+- **Hero Section**: Prominent personal branding with "Digital Success Lead & Strategic Growth Engineer" positioning, LinkedIn integration
+- **Work Experience**: Showcases 8+ years at Gen Digital with Gen Digital logo, highlighting product-led monetization for 100M+ users
+- **Core Expertise**: 2x2 grid showing alignment with MEWS strategic initiatives (Product Operations, Online GTM Strategy, AI-Native Development, Cross-Functional Collaboration)
+- **Growth Engine**: 2x2 grid showcasing AI-native development workflow with tools like Windsurf/Cascade, ChatGPT, Gemini, Claude, and PowerBI
+- **Data-Driven Risk Reduction**: Focus on A/B testing, telemetry systems, forecast modeling, and quality assurance
+- **The Mewser Mindset**: Interactive carousel of MEWS Constitution values (Delight Customers, Cultivate Trust, Simplify Complexity, Listen Deeply, Win Together)
+- **Position Fit Evaluation**: Detailed analysis of fit for three MEWS roles (Senior Product Operations Specialist, Senior Associate - Market Development, Lead Product Builder) with visual metrics and job description links
+- **Path to Mews**: Timeline showing career evolution from Junior to Senior E-Commerce Specialist → Principal Product Growth Generalist → Growth Monetization Lead & PLG
+- **Fixed Navigation Bar**: Metro-style menu with section highlighting, mobile responsiveness with burger menu, LinkedIn and email CTAs
+- **CTA Section**: LinkedIn and email contact options with AI-Native Development expertise
 
 ## Tech Stack
 
-- Next.js 14 (App Router)
+- Next.js 16 (App Router)
 - TypeScript
 - Tailwind CSS
 - Framer Motion (animations)
@@ -75,17 +77,21 @@ npm start
 ## Design Notes
 
 - Dark mode by default (Mews dashboard aesthetic)
-- Light/dark mode toggle in top-right corner
-- Responsive design for all screen sizes
+- MEWS favicon and branding integration
+- Responsive design with mobile burger menu
 - Smooth animations using Framer Motion
 - High-contrast colors for accessibility
-- Mews-specific keywords and alignment throughout
+- Fixed navigation bar with section highlighting
+- MEWS-specific keywords and alignment throughout
+- Gen Digital logo integration in Work Experience section
 
 ## Content Strategy
 
-The website follows the "Staff TPM / Product Ops" narrative:
+The website targets MEWS with a focus on:
 
-- **Executive Reporting**: Positioned as filter between C-suite vision and squad execution
-- **R&D Efficiency**: Trial Squad experience framed as Product Ops excellence
-- **Technical Alignment**: Azure DevOps proficiency emphasized for C#/.NET environment
-- **Human-Centric**: All content reflects MEWS values (Ambitious, Resilient, Curious, Open, Human)
+- **Position Fit Evaluation**: Detailed analysis of fit for three MEWS roles with weighted metrics (Technical Fit, Soft Skills Fit, Past Experience Fit)
+- **Product Operations**: Strongest match - process optimization, cross-functional leadership, strategic influence without authority
+- **Market Development**: Excellent fit for strategic operations, data-driven insights, and cross-functional GTM leadership
+- **Lead Product Builder**: Second strongest match - AI-native prototyping, product intuition, rapid validation
+- **AI-Native Development**: Highlighting expertise with Windsurf, Cascade, ChatGPT, Gemini, Claude for rapid GTM validation
+- **Human-Centric**: All content reflects MEWS Constitution values (Delight Customers, Cultivate Trust, Simplify Complexity, Listen Deeply, Win Together)
