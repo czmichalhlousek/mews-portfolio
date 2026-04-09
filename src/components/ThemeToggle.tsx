@@ -9,15 +9,20 @@ export default function ThemeToggle() {
   useEffect(() => {
     // Initialize with dark mode by default
     const html = document.documentElement;
+    const body = document.body;
     html.classList.add("dark");
+    body.classList.remove("light-mode");
   }, []);
 
   useEffect(() => {
     const html = document.documentElement;
+    const body = document.body;
     if (isDark) {
       html.classList.add("dark");
+      body.classList.remove("light-mode");
     } else {
       html.classList.remove("dark");
+      body.classList.add("light-mode");
     }
   }, [isDark]);
 

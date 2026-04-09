@@ -2,8 +2,23 @@
 
 import { motion } from "framer-motion";
 import { Award, TrendingUp, Users, Zap } from "lucide-react";
+import { useState, useEffect } from "react";
 
 export default function GenExperience() {
+  const [isDark, setIsDark] = useState(true);
+
+  useEffect(() => {
+    const checkTheme = () => {
+      setIsDark(document.documentElement.classList.contains("dark"));
+    };
+    checkTheme();
+    
+    const observer = new MutationObserver(checkTheme);
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
+    
+    return () => observer.disconnect();
+  }, []);
+
   const achievements = [
     {
       icon: Award,
@@ -38,7 +53,7 @@ export default function GenExperience() {
           className="text-center mb-16"
         >
           <img
-            src="https://filecache.mediaroom.com/mr5mr_nortonlifelock/178470/Gen-Gen-Family-GenOneLine-Col-Dark-RGB-Web.png"
+            src={isDark ? "https://filecache.mediaroom.com/mr5mr_nortonlifelock/178470/Gen-Gen-Family-GenOneLine-Col-Dark-RGB-Web.png" : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Gen_logo.svg/1280px-Gen_logo.svg.png"}
             alt="Gen Digital"
             className="h-12 mx-auto mb-6"
           />
