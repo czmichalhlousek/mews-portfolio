@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useState, useEffect } from "react";
-import { Linkedin, Mail, Menu, X } from "lucide-react";
+import { Linkedin, Mail, Menu, X, Moon, Sun } from "lucide-react";
 
 const sections = [
   { name: "Gen Digital Experience", id: "gen-experience" },
@@ -18,10 +18,31 @@ export default function Navigation() {
   const [isVisible, setIsVisible] = useState(false);
   const [activeSection, setActiveSection] = useState("");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isDark, setIsDark] = useState(true);
   const { scrollY } = useScroll();
 
   // Show navbar after scrolling past hero (approx 100vh)
   const navbarOpacity = useTransform(scrollY, [0, 500], [0, 1]);
+
+  useEffect(() => {
+    // Initialize with dark mode by default
+    const html = document.documentElement;
+    const body = document.body;
+    html.classList.add("dark");
+    body.classList.remove("light-mode");
+  }, []);
+
+  useEffect(() => {
+    const html = document.documentElement;
+    const body = document.body;
+    if (isDark) {
+      html.classList.add("dark");
+      body.classList.remove("light-mode");
+    } else {
+      html.classList.remove("dark");
+      body.classList.add("light-mode");
+    }
+  }, [isDark]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -95,6 +116,13 @@ export default function Navigation() {
 
           {/* CTAs */}
           <div className="flex items-center gap-2 flex-shrink-0">
+            <button
+              onClick={() => setIsDark(!isDark)}
+              className="p-2 border border-mews-border hover:border-mews-accent rounded-lg transition-all duration-200"
+              aria-label="Toggle theme"
+            >
+              {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+            </button>
             <a
               href="https://www.linkedin.com/in/michalhlousek/"
               target="_blank"
@@ -136,6 +164,15 @@ export default function Navigation() {
                   {section.name}
                 </a>
               ))}
+              <div className="flex items-center gap-3 px-4 py-2">
+                <button
+                  onClick={() => setIsDark(!isDark)}
+                  className="flex items-center gap-2 text-sm font-medium text-mews-muted hover:text-mews-accent transition-all duration-200"
+                >
+                  {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+                  {isDark ? "Light Mode" : "Dark Mode"}
+                </button>
+              </div>
             </div>
           </motion.div>
         )}

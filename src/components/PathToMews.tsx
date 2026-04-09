@@ -59,7 +59,7 @@ export default function PathToMews() {
                   transition={{ duration: 0.6, delay: index * 0.2 }}
                   className={`relative flex items-center ${isEven ? "md:flex-row" : "md:flex-row-reverse"}`}
                 >
-                  <div className="w-12 h-12 bg-mews-accent rounded-full items-center justify-center border-4 border-mews-card flex-shrink-0 ml-0 md:ml-0 md:absolute md:left-1/2 md:transform md:-translate-x-1/2 z-10">
+                  <div className="w-12 h-12 bg-mews-accent rounded-full flex items-center justify-center border-4 border-mews-card flex-shrink-0 ml-0 md:ml-0 md:absolute md:left-1/2 md:transform md:-translate-x-1/2 z-10">
                     <Icon className="w-6 h-6 text-white" />
                   </div>
                   
