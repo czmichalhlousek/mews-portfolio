@@ -31,7 +31,7 @@ export default function CTA() {
             </a>
             
             <a
-              href="mailto:michal.hlousek@email.com"
+              href="mailto:cz.michalhlousek@gmail.com"
               className="group flex items-center gap-3 px-8 py-4 border border-mews-border hover:border-mews-accent rounded-lg font-semibold transition-all duration-300"
             >
               <Mail className="w-6 h-6" />

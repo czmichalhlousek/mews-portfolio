@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useState, useEffect } from "react";
-import { Linkedin, Mail } from "lucide-react";
+import { Linkedin, Mail, Menu, X } from "lucide-react";
 
 const sections = [
   { name: "Gen Digital Experience", id: "gen-experience" },
@@ -17,6 +17,7 @@ const sections = [
 export default function Navigation() {
   const [isVisible, setIsVisible] = useState(false);
   const [activeSection, setActiveSection] = useState("");
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { scrollY } = useScroll();
 
   // Show navbar after scrolling past hero (approx 100vh)
@@ -61,13 +62,17 @@ export default function Navigation() {
     >
       <div className="max-w-6xl mx-auto px-4 py-3">
         <div className="flex items-center justify-between gap-4">
-          {/* Name */}
-          <div className="flex-shrink-0">
-            <span className="text-sm font-bold text-mews-accent">Michal Hloušek</span>
-          </div>
+          {/* Mobile menu button */}
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="lg:hidden p-2 text-mews-accent"
+            aria-label="Toggle menu"
+          >
+            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
 
-          {/* Metro-style menu */}
-          <div className="flex items-center gap-2 overflow-x-auto no-scrollbar flex-1">
+          {/* Metro-style menu - desktop */}
+          <div className="hidden lg:flex items-center gap-2 overflow-x-auto no-scrollbar flex-1">
             {sections.map((section) => (
               <a
                 key={section.id}
@@ -95,7 +100,7 @@ export default function Navigation() {
               <Linkedin className="w-5 h-5" />
             </a>
             <a
-              href="mailto:michal.hlousek@email.com"
+              href="mailto:cz.michalhlousek@gmail.com"
               className="p-2 border border-mews-border hover:border-mews-accent rounded-lg transition-all duration-200"
               aria-label="Email"
             >
@@ -103,6 +108,32 @@ export default function Navigation() {
             </a>
           </div>
         </div>
+
+        {/* Mobile menu dropdown */}
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="lg:hidden mt-4 pb-4 border-t border-mews-border pt-4"
+          >
+            <div className="flex flex-col gap-2">
+              {sections.map((section) => (
+                <a
+                  key={section.id}
+                  href={`#${section.id}`}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                    activeSection === section.id
+                      ? "bg-mews-accent text-white"
+                      : "text-mews-muted hover:bg-mews-accent/10 hover:text-mews-accent"
+                  }`}
+                >
+                  {section.name}
+                </a>
+              ))}
+            </div>
+          </motion.div>
+        )}
       </div>
     </motion.nav>
   );

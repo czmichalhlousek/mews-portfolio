@@ -5,8 +5,11 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Michal Hlousek | Staff TPM & Product Ops",
-  description: "Operational Excellence & Growth Architect - Building systems that allow innovation to scale",
+  title: "Michal Hlousek | MEWS",
+  description: "Digital Success Lead & Strategic Growth Engineer - Building systems that allow innovation to scale",
+  icons: {
+    icon: "https://www.mews.com/favicon.svg",
+  },
 };
 
 export default function RootLayout({
