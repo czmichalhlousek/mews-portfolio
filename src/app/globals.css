@@ -86,6 +86,22 @@
   body.light-mode svg {
     color: inherit !important;
   }
+  
+  body.light-mode #path-to-mews .bg-mews-accent {
+    background-color: #9333ea !important;
+  }
+  
+  body.light-mode #path-to-mews .text-white {
+    color: #ffffff !important;
+  }
+  
+  body.light-mode #alignment svg {
+    color: #ffffff !important;
+  }
+  
+  body.light-mode #alignment .text-mews-accent {
+    color: #9333ea !important;
+  }
 }
 
 html {
