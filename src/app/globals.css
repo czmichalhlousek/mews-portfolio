@@ -78,6 +78,14 @@
   body.light-mode .bg-gray-900 {
     background-color: #cccccc !important;
   }
+  
+  body.light-mode .text-mews-accent {
+    color: #9333ea !important;
+  }
+  
+  body.light-mode svg {
+    color: inherit !important;
+  }
 }
 
 html {
