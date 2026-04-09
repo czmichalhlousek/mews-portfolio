@@ -30,6 +30,15 @@ export default function Navigation() {
     const body = document.body;
     html.classList.add("dark");
     body.classList.remove("light-mode");
+    
+    // Listen for theme changes from other components
+    const handleThemeChange = (e: Event) => {
+      const customEvent = e as CustomEvent;
+      setIsDark(customEvent.detail.isDark);
+    };
+    
+    window.addEventListener("themeChange", handleThemeChange);
+    return () => window.removeEventListener("themeChange", handleThemeChange);
   }, []);
 
   useEffect(() => {
@@ -42,6 +51,9 @@ export default function Navigation() {
       html.classList.remove("dark");
       body.classList.add("light-mode");
     }
+    
+    // Emit theme change event for other components
+    window.dispatchEvent(new CustomEvent("themeChange", { detail: { isDark } }));
   }, [isDark]);
 
   useEffect(() => {

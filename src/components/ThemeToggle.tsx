@@ -13,6 +13,15 @@ export default function ThemeToggle() {
     const body = document.body;
     html.classList.add("dark");
     body.classList.remove("light-mode");
+    
+    // Listen for theme changes from other components
+    const handleThemeChange = (e: Event) => {
+      const customEvent = e as CustomEvent;
+      setIsDark(customEvent.detail.isDark);
+    };
+    
+    window.addEventListener("themeChange", handleThemeChange);
+    return () => window.removeEventListener("themeChange", handleThemeChange);
   }, []);
 
   useEffect(() => {
@@ -25,6 +34,9 @@ export default function ThemeToggle() {
       html.classList.remove("dark");
       body.classList.add("light-mode");
     }
+    
+    // Emit theme change event for other components
+    window.dispatchEvent(new CustomEvent("themeChange", { detail: { isDark } }));
   }, [isDark]);
 
   useEffect(() => {
@@ -37,9 +49,13 @@ export default function ThemeToggle() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleToggle = () => {
+    setIsDark(!isDark);
+  };
+
   return (
     <button
-      onClick={() => setIsDark(!isDark)}
+      onClick={handleToggle}
       className={`fixed top-4 right-4 z-50 p-3 rounded-full bg-mews-card border border-mews-border hover:border-mews-accent transition-all duration-300 ${
         isVisible ? "opacity-100" : "opacity-0 pointer-events-none"
       }`}
