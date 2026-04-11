@@ -106,7 +106,16 @@ export default function Navigation() {
 
           {/* Name - mobile */}
           <div className="lg:hidden flex-1 text-center">
-            <span className="text-sm font-bold text-mews-accent">Michal Hloušek</span>
+            <button
+              onClick={() => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                setIsMobileMenuOpen(false);
+              }}
+              className="text-sm font-bold text-mews-accent hover:opacity-80 transition-opacity"
+              aria-label="Scroll to home"
+            >
+              Michal Hloušek
+            </button>
           </div>
 
           {/* Metro-style menu - desktop */}
