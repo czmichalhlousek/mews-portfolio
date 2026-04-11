@@ -45,12 +45,12 @@ export default function CompanyLogos() {
               }}
               className="relative group"
             >
-              <div className={`p-6 bg-mews-card border border-mews-border rounded-xl hover:border-mews-accent transition-all duration-300 relative overflow-hidden`}>
+              <div className={`p-8 bg-mews-card border border-mews-border rounded-xl hover:border-mews-accent transition-all duration-300 relative overflow-hidden`}>
                 {/* Gradient overlay on hover */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${company.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
                 
-                <div className="relative z-10 flex items-center justify-center h-20">
-                  <div className={`text-xl md:text-2xl font-bold bg-gradient-to-br ${company.color} bg-clip-text text-transparent`}>
+                <div className="relative z-10 flex items-center justify-center h-24">
+                  <div className={`text-2xl md:text-3xl font-black bg-gradient-to-br ${company.color} bg-clip-text text-transparent`}>
                     {company.name}
                   </div>
                 </div>
