@@ -150,7 +150,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="mb-6 flex justify-center"
           >
-            <MewsLogo className="w-24 h-24 md:w-32 md:h-32 dark:fill-white fill-black transition-colors duration-300" />
+            <MewsLogo className="w-72 h-72 md:w-96 md:h-96 dark:fill-white fill-black transition-colors duration-300" />
           </motion.div>
 
           {/* Prominent "I am Michal Hloušek" headline */}
