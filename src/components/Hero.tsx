@@ -6,8 +6,38 @@ import { ArrowRight, Linkedin } from "lucide-react";
 export default function Hero() {
   return (
     <section className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-mews-accent/5 via-transparent to-mews-accentHover/5" />
-      <div className="absolute inset-0 bg-gradient-radial from-mews-accent/10 via-transparent to-transparent" />
+      {/* Animated gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-mews-accent/10 via-transparent to-mews-accentHover/10" />
+      <div className="absolute inset-0 bg-gradient-radial from-mews-accent/20 via-transparent to-transparent" />
+      
+      {/* Floating orbs for particle effect */}
+      <motion.div
+        animate={{
+          x: [0, 100, 0],
+          y: [0, -100, 0],
+          scale: [1, 1.2, 1],
+        }}
+        transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute top-20 left-20 w-64 h-64 bg-mews-accent/20 rounded-full blur-3xl"
+      />
+      <motion.div
+        animate={{
+          x: [0, -100, 0],
+          y: [0, 100, 0],
+          scale: [1, 1.3, 1],
+        }}
+        transition={{ duration: 25, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute bottom-20 right-20 w-96 h-96 bg-mews-accentHover/20 rounded-full blur-3xl"
+      />
+      <motion.div
+        animate={{
+          x: [50, -50, 50],
+          y: [-50, 50, -50],
+          scale: [1, 1.1, 1],
+        }}
+        transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-mews-accent/10 rounded-full blur-3xl"
+      />
       
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -61,22 +91,26 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center"
         >
-          <a
+          <motion.a
             href="#position-fit"
-            className="group flex items-center gap-2 px-8 py-4 bg-mews-accent hover:bg-mews-accentHover rounded-lg font-semibold transition-all duration-300"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="group flex items-center gap-2 px-8 py-4 bg-mews-accent hover:bg-mews-accentHover rounded-lg font-semibold transition-all duration-300 shadow-lg shadow-mews-accent/25 hover:shadow-mews-accent/50"
           >
             Explore My Alignment
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </a>
-          <a
+          </motion.a>
+          <motion.a
             href="https://www.linkedin.com/in/michalhlousek/"
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center gap-3 px-8 py-4 border border-mews-border hover:border-mews-accent rounded-lg font-semibold transition-all duration-300"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="group flex items-center gap-3 px-8 py-4 border border-mews-border hover:border-mews-accent rounded-lg font-semibold transition-all duration-300 hover:bg-mews-accent/10"
           >
             <Linkedin className="w-6 h-6" />
             Connect on LinkedIn
-          </a>
+          </motion.a>
         </motion.div>
       </motion.div>
 

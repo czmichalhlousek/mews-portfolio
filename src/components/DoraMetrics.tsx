@@ -41,8 +41,11 @@ const positions = [
 
 export default function DoraMetrics() {
   return (
-    <section id="position-fit" className="py-24 px-4">
-      <div className="max-w-6xl mx-auto">
+    <section id="position-fit" className="py-24 px-4 relative overflow-hidden">
+      {/* Subtle background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-mews-accent/5 via-transparent to-mews-accentHover/5" />
+      
+      <div className="max-w-6xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -50,7 +53,7 @@ export default function DoraMetrics() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Position Fit Evaluation</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-mews-accent to-mews-accentHover bg-clip-text text-transparent">Position Fit Evaluation</h2>
           <p className="text-xl text-mews-muted">How my experience aligns with Mews opportunities</p>
         </motion.div>
 
@@ -62,9 +65,15 @@ export default function DoraMetrics() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="p-6 bg-mews-card border border-mews-border rounded-xl hover:border-mews-accent transition-all duration-300"
+              whileHover={{ 
+                scale: 1.03,
+                boxShadow: "0 0 30px rgba(147, 51, 234, 0.2)"
+              }}
+              className="p-6 bg-mews-card border border-mews-border rounded-xl hover:border-mews-accent transition-all duration-300 relative overflow-hidden group"
             >
-              <div className="mb-4">
+              {/* Subtle gradient overlay on hover */}
+              <div className="absolute inset-0 bg-gradient-to-br from-mews-accent/5 to-mews-accentHover/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="relative z-10 mb-4">
                 <h3 className="text-lg font-bold mb-2 leading-tight whitespace-pre-line">{position.title}</h3>
                 <p className="text-sm text-mews-muted mb-2">{position.subtitle}</p>
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-mews-accent/20 border border-mews-accent/30 rounded-full">
@@ -72,7 +81,7 @@ export default function DoraMetrics() {
                 </div>
               </div>
 
-              <div className="space-y-3 mb-4">
+              <div className="relative z-10 space-y-3 mb-4">
                 <div>
                   <div className="flex justify-between text-sm mb-1">
                     <span className="text-mews-muted">Technical Fit</span>
@@ -122,9 +131,9 @@ export default function DoraMetrics() {
                 </div>
               </div>
 
-              <p className="text-sm text-mews-muted mb-4 leading-relaxed">{position.description}</p>
+              <p className="relative z-10 text-sm text-mews-muted mb-4 leading-relaxed">{position.description}</p>
 
-              <div className="space-y-2 mb-4">
+              <div className="relative z-10 space-y-2 mb-4">
                 {position.highlights.map((highlight, i) => (
                   <div key={i} className="flex items-center gap-2 text-sm">
                     <CheckCircle className="w-4 h-4 text-mews-accent flex-shrink-0" />
@@ -137,7 +146,7 @@ export default function DoraMetrics() {
                 href={position.jdUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm text-mews-accent hover:underline font-semibold"
+                className="relative z-10 inline-flex items-center gap-2 text-sm text-mews-accent hover:underline font-semibold"
               >
                 View Job Description →
               </a>
