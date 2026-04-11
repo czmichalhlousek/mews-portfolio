@@ -1,4 +1,5 @@
 import Hero from "@/components/Hero";
+import CompanyLogos from "@/components/CompanyLogos";
 import GenExperience from "@/components/GenExperience";
 import MewsAlignment from "@/components/MewsAlignment";
 import GrowthEngine from "@/components/GrowthEngine";
@@ -16,6 +17,7 @@ export default function Home() {
       <ThemeToggle />
       <Navigation />
       <Hero />
+      <CompanyLogos />
       <GenExperience />
       <MewsAlignment />
       <GrowthEngine />
