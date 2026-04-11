@@ -11,7 +11,7 @@ const positions = [
   "Strategic Growth Engineer",
   "Growth Generalist",
   "Monetization Lead",
-  "Go to market expert",
+  "Go-To-Market Expert",
 ];
 
 function TypewriterEffect() {
