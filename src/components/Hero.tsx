@@ -148,7 +148,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="mb-2 flex justify-center"
+            className="mb-0 flex justify-center"
           >
             <MewsLogo className="w-48 h-48 md:w-64 md:h-64 dark:fill-white fill-black transition-colors duration-300" />
           </motion.div>
