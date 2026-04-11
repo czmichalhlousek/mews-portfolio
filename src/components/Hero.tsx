@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Linkedin } from "lucide-react";
 import { useState, useEffect } from "react";
+import MewsLogo from "./MewsLogo";
 
 const name = "Michal Hloušek";
 const positions = [
@@ -142,6 +143,16 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mb-8"
         >
+          {/* MEWS Logo */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="mb-6 flex justify-center"
+          >
+            <MewsLogo className="w-24 h-24 md:w-32 md:h-32 dark:fill-white fill-black transition-colors duration-300" />
+          </motion.div>
+
           {/* Prominent "I am Michal Hloušek" headline */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
