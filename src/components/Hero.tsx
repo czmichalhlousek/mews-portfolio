@@ -148,9 +148,9 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="mb-6 flex justify-center"
+            className="mb-2 flex justify-center"
           >
-            <MewsLogo className="w-72 h-72 md:w-96 md:h-96 dark:fill-white fill-black transition-colors duration-300" />
+            <MewsLogo className="w-48 h-48 md:w-64 md:h-64 dark:fill-white fill-black transition-colors duration-300" />
           </motion.div>
 
           {/* Prominent "I am Michal Hloušek" headline */}
