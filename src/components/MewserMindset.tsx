@@ -8,27 +8,32 @@ const values = [
   {
     title: "Delight Customers",
     description: "Driving innovation to create exceptional experiences that transform hospitality",
-    icon: "🎯"
+    icon: "🎯",
+    alignment: "Led customer journey optimization for Avast One, increasing engagement through data-driven personalization and seamless onboarding experiences"
   },
   {
     title: "Cultivate Trust",
     description: "Fostering openness and transparency across teams to build lasting relationships",
-    icon: "🤝"
+    icon: "🤝",
+    alignment: "Built cross-functional bridges between product, engineering, and business teams at Gen Digital, creating transparent workflows and shared success metrics"
   },
   {
     title: "Simplify Complexity",
     description: "Prizing agility by turning complex challenges into elegant, scalable solutions",
-    icon: "⚡"
+    icon: "⚡",
+    alignment: "Architected end-to-end AI scam protection journey across global portfolio, simplifying complex security challenges into user-friendly experiences"
   },
   {
     title: "Listen Deeply",
     description: "Acting boldly on insights to create meaningful impact for customers and colleagues",
-    icon: "👂"
+    icon: "👂",
+    alignment: "Used customer telemetry and A/B testing to drive product decisions, transforming insights into actionable features for millions of users"
   },
   {
     title: "Win Together",
     description: "Enjoying the journey while collaborating to achieve shared success",
-    icon: "🎉"
+    icon: "🎉",
+    alignment: "Orchestrated cross-brand GTM strategies across Avast/AVG/Norton, aligning diverse teams toward shared monetization goals"
   }
 ];
 
@@ -67,7 +72,11 @@ export default function MewserMindset() {
           <div className="p-12 bg-mews-dark border border-mews-border rounded-2xl text-center">
             <div className="text-6xl mb-6">{values[currentIndex].icon}</div>
             <h3 className="text-3xl font-bold mb-4 text-mews-accent">{values[currentIndex].title}</h3>
-            <p className="text-xl text-mews-muted leading-relaxed">{values[currentIndex].description}</p>
+            <p className="text-xl text-mews-muted leading-relaxed mb-6">{values[currentIndex].description}</p>
+            <div className="mt-8 pt-6 border-t border-mews-border">
+              <p className="text-sm text-mews-accent font-semibold mb-2">My Alignment:</p>
+              <p className="text-base text-mews-muted leading-relaxed">{values[currentIndex].alignment}</p>
+            </div>
           </div>
 
           <div className="flex justify-center gap-4 mt-8">
