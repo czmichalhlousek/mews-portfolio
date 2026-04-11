@@ -2,8 +2,67 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, Linkedin } from "lucide-react";
+import { useState, useEffect } from "react";
 
 const name = "Michal Hloušek";
+const positions = [
+  "Digital Success Lead",
+  "Strategic Growth Engineer",
+  "Growth Generalist",
+  "Monetization Lead",
+  "Go to market expert",
+];
+
+function TypewriterEffect() {
+  const [position, setPosition] = useState("");
+  const [positionIndex, setPositionIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [showCursor, setShowCursor] = useState(true);
+
+  useEffect(() => {
+    const currentText = positions[positionIndex];
+    
+    const typingSpeed = isDeleting ? 50 : 100;
+    const pauseTime = isDeleting ? 500 : 2000;
+
+    const timer = setTimeout(() => {
+      if (!isDeleting) {
+        if (position === currentText) {
+          setTimeout(() => setIsDeleting(true), pauseTime);
+        } else {
+          setPosition(currentText.slice(0, position.length + 1));
+        }
+      } else {
+        if (position === "") {
+          setIsDeleting(false);
+          setPositionIndex((positionIndex + 1) % positions.length);
+        } else {
+          setPosition(position.slice(0, position.length - 1));
+        }
+      }
+    }, typingSpeed);
+
+    return () => clearTimeout(timer);
+  }, [position, positionIndex, isDeleting]);
+
+  // Blinking cursor effect
+  useEffect(() => {
+    const cursorTimer = setInterval(() => {
+      setShowCursor((prev) => !prev);
+    }, 500);
+    return () => clearInterval(cursorTimer);
+  }, []);
+
+  return (
+    <span className="bg-gradient-to-r from-mews-accent to-mews-accentHover bg-clip-text text-transparent">
+      {position}
+      <motion.span
+        animate={{ opacity: showCursor ? 1 : 0 }}
+        className="inline-block w-0.5 h-6 bg-mews-accent ml-1 align-middle"
+      />
+    </span>
+  );
+}
 
 export default function Hero() {
   return (
@@ -82,32 +141,37 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mb-8"
         >
-          {/* Animated name with letter-by-letter reveal */}
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-3xl md:text-5xl font-bold mb-6 text-white leading-tight"
+          {/* Prominent "I am Michal Hloušek" headline */}
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="text-5xl md:text-7xl font-bold mb-4 text-white leading-tight"
           >
+            I am{" "}
             {name.split("").map((letter, index) => (
               <motion.span
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 + index * 0.05 }}
+                transition={{ duration: 0.5, delay: 0.4 + index * 0.03 }}
+                className="inline-block"
               >
                 {letter === " " ? "\u00A0" : letter}
               </motion.span>
             ))}
-          </motion.p>
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-mews-accent to-mews-accentHover bg-clip-text text-transparent leading-tight"
-          >
-            Digital Success Lead & Strategic Growth Engineer
           </motion.h1>
+          
+          {/* Dynamic typewriter effect for positions */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+            className="text-4xl md:text-6xl font-bold mb-6 leading-tight h-16 md:h-20"
+          >
+            <TypewriterEffect />
+          </motion.div>
+          
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
