@@ -3,6 +3,8 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Linkedin } from "lucide-react";
 
+const name = "Michal Hloušek";
+
 export default function Hero() {
   return (
     <section className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden">
@@ -10,33 +12,62 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-br from-mews-accent/10 via-transparent to-mews-accentHover/10" />
       <div className="absolute inset-0 bg-gradient-radial from-mews-accent/20 via-transparent to-transparent" />
       
-      {/* Floating orbs for particle effect */}
+      {/* Floating orbs for particle effect - enhanced with pulsing */}
       <motion.div
         animate={{
           x: [0, 100, 0],
           y: [0, -100, 0],
           scale: [1, 1.2, 1],
+          opacity: [0.2, 0.4, 0.2],
         }}
         transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-20 left-20 w-64 h-64 bg-mews-accent/20 rounded-full blur-3xl"
+        className="absolute top-20 left-20 w-64 h-64 bg-mews-accent rounded-full blur-3xl"
       />
       <motion.div
         animate={{
           x: [0, -100, 0],
           y: [0, 100, 0],
           scale: [1, 1.3, 1],
+          opacity: [0.15, 0.3, 0.15],
         }}
         transition={{ duration: 25, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute bottom-20 right-20 w-96 h-96 bg-mews-accentHover/20 rounded-full blur-3xl"
+        className="absolute bottom-20 right-20 w-96 h-96 bg-mews-accentHover rounded-full blur-3xl"
       />
       <motion.div
         animate={{
           x: [50, -50, 50],
           y: [-50, 50, -50],
           scale: [1, 1.1, 1],
+          opacity: [0.1, 0.25, 0.1],
         }}
         transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-mews-accent/10 rounded-full blur-3xl"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-mews-accent rounded-full blur-3xl"
+      />
+      
+      {/* Additional smaller pulsing bubbles */}
+      <motion.div
+        animate={{
+          scale: [0.8, 1.2, 0.8],
+          opacity: [0.1, 0.3, 0.1],
+        }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute top-1/4 left-1/4 w-32 h-32 bg-mews-accent rounded-full blur-2xl"
+      />
+      <motion.div
+        animate={{
+          scale: [1.2, 0.8, 1.2],
+          opacity: [0.15, 0.35, 0.15],
+        }}
+        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute bottom-1/3 right-1/4 w-40 h-40 bg-mews-accentHover rounded-full blur-2xl"
+      />
+      <motion.div
+        animate={{
+          scale: [1, 1.4, 1],
+          opacity: [0.08, 0.2, 0.08],
+        }}
+        transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute top-1/3 right-1/3 w-24 h-24 bg-mews-accent rounded-full blur-xl"
       />
       
       <motion.div
@@ -51,13 +82,23 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mb-8"
         >
+          {/* Animated name with letter-by-letter reveal */}
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-3xl md:text-5xl font-bold mb-6 text-white leading-tight"
           >
-            Michal Hloušek
+            {name.split("").map((letter, index) => (
+              <motion.span
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 + index * 0.05 }}
+              >
+                {letter === " " ? "\u00A0" : letter}
+              </motion.span>
+            ))}
           </motion.p>
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
