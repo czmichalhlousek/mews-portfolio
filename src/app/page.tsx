@@ -7,6 +7,7 @@ import MewserMindset from "@/components/MewserMindset";
 import DoraMetrics from "@/components/DoraMetrics";
 import PathToMews from "@/components/PathToMews";
 import CTA from "@/components/CTA";
+import Footer from "@/components/Footer";
 import ThemeToggle from "@/components/ThemeToggle";
 import Navigation from "@/components/Navigation";
 
@@ -24,6 +25,7 @@ export default function Home() {
       <DoraMetrics />
       <PathToMews />
       <CTA />
+      <Footer />
     </main>
   );
 }
