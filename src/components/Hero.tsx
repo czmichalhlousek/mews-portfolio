@@ -212,7 +212,7 @@ export default function Hero() {
             rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="group flex items-center gap-3 px-8 py-4 border border-mews-border hover:border-mews-accent rounded-lg font-semibold transition-all duration-300 hover:bg-mews-accent/10"
+            className="group flex items-center gap-3 px-8 py-4 border border-mews-accent rounded-lg font-semibold transition-all duration-300 hover:bg-mews-accent/10"
           >
             <Linkedin className="w-6 h-6" />
             Connect on LinkedIn
