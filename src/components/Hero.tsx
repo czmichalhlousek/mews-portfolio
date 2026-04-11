@@ -54,11 +54,12 @@ function TypewriterEffect() {
   }, []);
 
   return (
-    <span className="bg-gradient-to-r from-mews-accent to-mews-accentHover bg-clip-text text-transparent">
+    <span className="bg-gradient-to-r from-mews-accent to-mews-accentHover bg-clip-text text-transparent font-bold">
       {position}
       <motion.span
         animate={{ opacity: showCursor ? 1 : 0 }}
-        className="inline-block w-0.5 h-6 bg-mews-accent ml-1 align-middle"
+        className="inline-block w-0.5 bg-mews-accent ml-1 align-middle"
+        style={{ height: '1em' }}
       />
     </span>
   );
@@ -146,7 +147,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-5xl md:text-7xl font-bold mb-4 text-white leading-tight"
+            className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-bold mb-4 text-white leading-tight whitespace-nowrap"
           >
             I am{" "}
             {name.split("").map((letter, index) => (
@@ -167,7 +168,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="text-4xl md:text-6xl font-bold mb-6 leading-tight h-16 md:h-20"
+            className="text-xl sm:text-2xl md:text-4xl lg:text-6xl font-bold mb-6 leading-tight h-12 sm:h-14 md:h-16 lg:h-20 whitespace-nowrap"
           >
             <TypewriterEffect />
           </motion.div>
